@@ -21,7 +21,7 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Nadia Pagan</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
@@ -43,10 +43,10 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">perks of being a wallflower</option>
+          <option value="book2">the fault in our stars</option>
+          <option value="book3">amarican phyco</option>
+          <option value="book4">lolita</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
@@ -58,13 +58,14 @@ Select ONE Additional Feature to Add
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
 
+        
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie2") {
           $("#movie-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#movie-result").text("lol no you are incorect");
         }
       });
 
@@ -76,13 +77,72 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+          $("#book-result").text("CORRECT!");
         } else {
           $("#book-result").text("Try Again!");
         }
+         $("#food-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#food-answer");
+        var answer = $answer.val();
+
+        if (answer === "food1") {
+          $("#food-result").text("CORRECT!");
+        } else {
+          $("#food-result").text("Try Again!");
+
       });
     </script>
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
 </html>
+<form id="food-form">
+      <label>
+        🥐 What is my favorite food?
+        <select id="food-answer">
+          <option value="Food1">cake</option>
+          <option value="food2">pizza</option>
+          <option value="food3">cake</option>
+          <option value="food4">pasta</option>
+        </select>
+      </label>
+      <button type="submit">Check food Answer</button>
+    </form>
+    <div id="food-result"></div>
+    <hr />
+<form id="animal-form">
+      <label>
+        🥐 What is my favorite food?
+        <select id="animal-answer">
+          <option value="animal1">cat</option>
+          <option value="animal2">dog</option>
+          <option value="animal3">snake</option>
+          <option value="animal4">frog</option>
+        </select>
+      </label>
+      <button type="submit">Check animal Answer</button>
+  
+    </form>
+    <div id="animal-result"></div>
+<p>
+  CORRECT 
+</p>
+<img
+       src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982110994/the-perks-of-being-a-wallflower-9781982110994_lg.jpg"
+      width="100" >
+<img
+     src="https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg?format=2500w"
+  width="100"
+     >
+<img
+     src="https://zenaskitchen.com/wp-content/uploads/2024/09/sausage-vodka-pasta-1.jpg"
+     width="100"
+     >
+<img
+     src="https://m.media-amazon.com/images/I/71TyLaZHdAL._AC_UF894,1000_QL80_.jpg"
+     width="100"
+     >
+
+    <hr />
